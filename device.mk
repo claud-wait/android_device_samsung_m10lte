@@ -325,3 +325,6 @@ PRODUCT_PACKAGES += \
 -include $(LOCAL_PATH)/vendor_prop.mk
 
 $(call inherit-product-if-exists, vendor/samsung/m10lte/m10lte-vendor.mk)
+
+# call the proprietary setup
+$(call inherit-product, vendor/samsung/universal7870-common/universal7870-common-vendor.mk)
