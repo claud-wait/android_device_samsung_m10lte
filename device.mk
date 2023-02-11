@@ -324,7 +324,9 @@ PRODUCT_PACKAGES += \
 # Properties
 -include $(LOCAL_PATH)/vendor_prop.mk
 
-$(call inherit-product-if-exists, vendor/samsung/m10lte/m10lte-vendor.mk)
+# clang-r353983c1 missing ld executable
+$(shell cp -r device/samsung/m10lte/configs/clang/ld prebuilts/clang/host/linux-x86/clang-r353983c1/bin)
 
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/universal7870-common/universal7870-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/m10lte/m10lte-vendor.mk)
