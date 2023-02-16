@@ -15,6 +15,7 @@
 #
 
 DEVICE_PATH := device/samsung/m10lte
+LOCAL_PATH := device/samsung/m10lte
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += device/samsung/m10lte
@@ -22,7 +23,7 @@ PRODUCT_SOONG_NAMESPACES += device/samsung/m10lte
 # Boot animation
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
-TARGET_SCREEN_HEIGHT := 1480
+TARGET_SCREEN_HEIGHT := 1520
 TARGET_SCREEN_WIDTH := 720
 
 PRODUCT_ENFORCE_RRO_TARGETS := \
