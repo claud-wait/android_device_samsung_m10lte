@@ -75,7 +75,7 @@ TARGET_KERNEL_CONFIG := exynos7870-m10lte_defconfig
 
 # HIDL
 DEVICE_MATRIX_FILE := $(LOCAL_PATH)/configs/compatibility_matrix.xml
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifest.xml
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/configs/manifest.xml
 
 # Use these flags if the board has a ext4 partition larger than 2gb
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -113,17 +113,17 @@ BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
 # Display
 TARGET_SCREEN_DENSITY := 320
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_m10lte
+TARGET_INIT_VENDOR_LIB := //$(LOCAL_PATH):libinit_m10lte
 TARGET_RECOVERY_DEVICE_MODULES := libinit_m10lte
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)/releasetools
 
 # Camera
 BOARD_USE_SAMSUNG_CAMERAFORMAT_NV21 := true
